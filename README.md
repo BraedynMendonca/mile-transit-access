@@ -1,6 +1,10 @@
 # Mile — Tri-Valley Transit Access Lab
 
-**Live website:** https://mile-transit-access.vercel.app — public Vercel production site, with no sign-in required.
+**Live website:** https://mile-transit-access.vercel.app — no sign-in required.
+
+**Project by Braedyn Mendonca · Congressional App Challenge 2026**
+
+![Mile transit access explorer showing journey settings, reachable streets, and destination results](docs/preview-desktop.jpg)
 
 A complete, responsive web app for exploring what public transit makes reachable around Dublin, Pleasanton, and Livermore, California. Built for a Congressional App Challenge project using real public datasets.
 
@@ -96,6 +100,12 @@ data/source/                  Reproducible compressed OSM source snapshot
 docs/                         Architecture, data notes, demo, and verification
 ```
 
-See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) to understand the algorithm and [docs/DEMO.md](docs/DEMO.md) for a three-minute presentation outline. Record and explain any AI assistance in your submission; do not present generated code or unperformed user research as solely your own work.
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) to understand the algorithm and [docs/DEMO.md](docs/DEMO.md) for a three-minute presentation outline.
+
+## Development and AI assistance
+
+This project was developed with substantial assistance from **OpenAI Codex**, including project planning, code generation, data ingestion, routing implementation, interface development, debugging, documentation, and deployment. Braedyn Mendonca selected the local focus, provided requirements, and directed feature, design, and presentation revisions. This repository makes the implementation and its limitations available for inspection and reuse.
+
+Claims about interviews, adoption, or measured community impact are not made by this project. The current version is an independently developed public-data exploration tool.
 
 Application code is MIT-licensed. Source datasets retain their own licenses and attribution requirements; see [DATA_LICENSES.md](DATA_LICENSES.md).
