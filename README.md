@@ -22,7 +22,9 @@ npm run build          # Type checking and production build
 npm run preview        # Preview the production build
 ```
 
-Deploy the `dist/` directory to any static host. `.openai/hosting.json` configures the included private Sites preview. The app does not depend on Sites at runtime.
+The website is configured for Vercel hosting. `vercel.json` builds the source as a Vite app and publishes `dist/`. The production build also includes a static deployment configuration, so the verified build can be uploaded directly without rebuilding it remotely. See [docs/VERCEL.md](docs/VERCEL.md).
+
+The mobile layout has readable touch controls, a sticky navigation bar, safe-area spacing, horizontally scrollable destination categories, and an app manifest for adding the website to a home screen. The transit snapshot is compressed from 11.87 MB to 2.78 MB for production delivery; the underlying dataset is unchanged.
 
 ## What works
 
@@ -80,10 +82,13 @@ src/lib/routing.ts            Calendar, walking, and timetable engine
 src/lib/analysis.worker.ts    Background analysis and comparison cache
 src/lib/routing.test.ts       Meaningful routing regression tests
 src/lib/types.ts              Typed data and itinerary contracts
+src/lib/load-data.ts          Compressed production data loading
 src/styles.css                Responsive visual system
 scripts/prepare_data.py       Public-data ingestion and graph contraction
 scripts/fetch_osm.py          Bounded, cached map-data fallback
 scripts/validate_data.py      Data and checksum validation
+scripts/prepare-web-data.mjs  Compress the verified snapshot for mobile delivery
+scripts/finalize-web-build.mjs Package the static Vercel deployment
 public/data/                  Shipped app datasets and manifest
 data/source/                  Reproducible compressed OSM source snapshot
 docs/                         Architecture, data notes, demo, and verification

@@ -4,7 +4,7 @@
 
 Mile is a static React/TypeScript app built with Vite. Leaflet renders the map. A Web Worker loads a compact dataset and performs timetable analysis entirely in the browser. There is no account system, analytics service, or application server.
 
-The browser fetches `transit.json` and `census.geojson`. After the transit worker reports ready, changes to the query trigger a debounced calculation. Request IDs prevent an older result from replacing a newer one. The daily profile is cached by origin, date, budget, walking limit, and boarding limit.
+The browser fetches the compressed `transit.json.gz` snapshot and `census.geojson` in production. Native decompression or fflate decodes the identical source JSON. Development loads the original JSON directly. After the transit worker reports ready, changes to the query trigger a debounced calculation. Request IDs prevent an older result from replacing a newer one. The daily profile is cached by origin, date, budget, walking limit, and boarding limit.
 
 External browser requests are for map tiles and fonts. Transit analysis and custom starting points are not sent to a routing service. A user can deliberately copy a share URL containing the chosen coordinates and settings.
 

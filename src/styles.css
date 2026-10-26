@@ -2758,3 +2758,317 @@ main {
     scroll-behavior: auto !important;
   }
 }
+
+/* Phone-first production polish: readable controls, touch targets, and safe areas. */
+@media (max-width: 780px) {
+  .app-header {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    height: calc(66px + env(safe-area-inset-top, 0px));
+    padding-top: env(safe-area-inset-top, 0px);
+    background: #f7f8f4f5;
+    backdrop-filter: blur(12px);
+  }
+  .app-header nav {
+    gap: 19px;
+    font-size: 12px;
+  }
+  .app-header nav button {
+    min-width: 47px;
+  }
+  .hero {
+    padding: 23px 0 20px;
+    gap: 17px;
+  }
+  .hero h1 {
+    font-size: clamp(29px, 7.8vw, 37px);
+  }
+  .hero .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+  .hero p {
+    font-size: 12px;
+    color: #6c7e69;
+    line-height: 1.7;
+  }
+  .case-card {
+    min-height: 50px;
+    padding: 12px 14px;
+  }
+  .case-card strong {
+    font-size: 12px;
+  }
+  .workspace,
+  .comparison-section,
+  .destinations-section {
+    scroll-margin-top: 86px;
+  }
+  .planner-title .section-kicker {
+    font-size: 10px;
+  }
+  .mobile-planner-toggle {
+    min-height: 30px;
+    font-size: 12px;
+  }
+  .mobile-planner-summary {
+    flex-wrap: wrap;
+    font-size: 13px;
+    gap: 5px 9px;
+    color: #4d6846;
+  }
+  .mobile-planner-summary > span {
+    font-size: 11px;
+    color: #7d8f6f;
+  }
+  .planner.mobile-open .field-label {
+    font-size: 13px;
+  }
+  .planner.mobile-open .origin-select select,
+  .planner.mobile-open .date-field input,
+  .planner.mobile-open .time-heading input {
+    font-size: 16px;
+  }
+  .origin-select {
+    min-height: 46px;
+  }
+  .date-field {
+    min-height: 45px;
+  }
+  .map-pick-button {
+    font-size: 12px;
+    min-height: 40px;
+  }
+  .time-heading {
+    font-size: 12px;
+  }
+  .range {
+    height: 6px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+  .range::-webkit-slider-thumb {
+    width: 22px;
+    height: 22px;
+  }
+  .range::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+  }
+  .range-labels {
+    font-size: 10px;
+  }
+  .range-labels > span:nth-child(2) {
+    font-size: 9px;
+  }
+  .planner.mobile-open .budget-presets button,
+  .planner.mobile-open .segmented button {
+    min-height: 40px;
+    font-size: 12px;
+  }
+  .planner.mobile-open .transfer-field,
+  .planner.mobile-open .transfer-field select {
+    font-size: 12px;
+    min-height: 34px;
+  }
+  .planner-note p {
+    font-size: 11px;
+    color: #728468;
+  }
+  .view-title > strong {
+    font-size: 14px;
+  }
+  .view-title > span {
+    font-size: 9px;
+  }
+  .map-toolbar {
+    min-height: 69px;
+  }
+  .map-toolbar .text-button {
+    min-width: 40px;
+    min-height: 40px;
+    justify-content: center;
+  }
+  .map-container {
+    height: clamp(380px, 58svh, 520px);
+    min-height: 380px;
+    flex: none;
+  }
+  .map-frame,
+  .leaflet-map {
+    min-height: 0;
+    height: 100%;
+  }
+  .map-label {
+    font-size: 7px;
+  }
+  .map-layer-button {
+    min-height: 38px;
+    padding: 9px;
+  }
+  .map-layer-button span {
+    font-size: 10px;
+  }
+  .map-controls button {
+    width: 38px;
+    height: 38px;
+  }
+  .map-legend > span {
+    font-size: 8px;
+  }
+  .map-controls {
+    bottom: 75px;
+  }
+  .access-summary {
+    padding: 21px 16px;
+    gap: 12px;
+  }
+  .access-summary strong {
+    font-size: 26px;
+  }
+  .access-summary div > span:not(.summary-icon) {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  .access-summary strong small {
+    font-size: 10px;
+  }
+  .section-heading h2 {
+    font-size: 23px;
+    line-height: 1.3;
+  }
+  .section-heading p {
+    font-size: 12px;
+    color: #7f8e74;
+  }
+  .category-tabs {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 2px 0 6px;
+    scrollbar-width: none;
+  }
+  .category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .category-tabs button,
+  .category-tabs button:first-child {
+    flex-shrink: 0;
+    min-height: 40px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  .category-tabs button svg {
+    width: 15px;
+    height: 15px;
+  }
+  .category-tabs button span {
+    font-size: 10px;
+  }
+  .destination-search {
+    min-height: 46px;
+  }
+  .destination-search input {
+    font-size: 16px;
+  }
+  .destination-meta {
+    font-size: 10px;
+    align-items: start;
+  }
+  .destination-meta label {
+    max-width: 190px;
+    min-height: 28px;
+  }
+  .destination-meta input {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+  .destination-card {
+    padding: 14px 12px 0;
+    min-height: 180px;
+  }
+  .destination-card h3 {
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .destination-type {
+    font-size: 10px;
+    line-height: 1.6;
+    margin-top: auto;
+  }
+  .destination-card-bottom {
+    font-size: 9px;
+  }
+  .travel-badge {
+    font-size: 10px;
+  }
+  .outside-badge {
+    font-size: 10px;
+  }
+  .show-more {
+    min-height: 44px;
+    font-size: 12px;
+  }
+  .purpose-strip h3 {
+    font-size: 14px;
+  }
+  .purpose-strip p {
+    font-size: 11px;
+    color: #82916f;
+  }
+  .purpose-strip > button {
+    min-height: 30px;
+    font-size: 11px;
+  }
+  .journey-panel {
+    max-width: 320px;
+    width: calc(100% - 66px);
+  }
+  .journey-panel h3 {
+    font-size: 16px;
+  }
+  .journey-summary {
+    font-size: 10px;
+  }
+  .journey-step strong {
+    font-size: 12px;
+  }
+  .journey-step span:not(.leg-icon) {
+    font-size: 11px;
+  }
+  .journey-step small {
+    font-size: 10px;
+  }
+  .journey-panel > a {
+    font-size: 11px;
+    min-height: 35px;
+  }
+  .app-shell footer {
+    flex-wrap: wrap;
+    padding-bottom: calc(22px + env(safe-area-inset-bottom, 0px));
+    font-size: 10px;
+    gap: 14px;
+  }
+  .app-shell footer > div:first-child,
+  .app-shell footer > div:last-child {
+    max-width: 100%;
+  }
+  .app-shell footer > div:last-child {
+    align-items: start;
+  }
+  .app-shell footer > div:last-child > span {
+    max-width: 100%;
+    text-align: left;
+  }
+  .app-shell footer button {
+    font-size: 11px;
+    min-height: 32px;
+  }
+}

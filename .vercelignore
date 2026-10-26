@@ -1,0 +1,7 @@
+.git
+.data-cache
+.openai
+node_modules
+docs
+data/source
+*.tsbuildinfo

@@ -45,6 +45,7 @@ import { clock, dateOffset, TransitEngine, WALK_METERS_PER_SECOND } from './lib/
 import TransitMap from './components/TransitMap';
 import Dialog from './components/Dialog';
 import AccessChanges from './components/AccessChanges';
+import { loadTransitData } from './lib/load-data';
 
 const categories: { id: Category; label: string; icon: typeof ShoppingBag; color: string }[] = [
   { id: 'groceries', label: 'Groceries', icon: ShoppingBag, color: '#b98039' },
@@ -111,11 +112,7 @@ export default function App() {
 
   useEffect(() => {
     const abort = new AbortController();
-    fetch('/data/transit.json', { signal: abort.signal })
-      .then((r) => {
-        if (!r.ok) throw new Error('The transit snapshot could not be loaded.');
-        return r.json() as Promise<Dataset>;
-      })
+    loadTransitData(abort.signal)
       .then((d) => {
         if (!d.stops?.length || !d.trips?.length || !d.origins?.length)
           throw new Error('The transit snapshot is incomplete. Run the data refresh script.');

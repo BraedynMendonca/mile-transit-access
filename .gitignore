@@ -6,3 +6,6 @@ dist/
 .DS_Store
 coverage/
 *.local
+.vercel/
+public/data/transit.json.gz
+public/data/web.json
