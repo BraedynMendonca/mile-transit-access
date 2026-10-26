@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-10-26T02:09:19.124521+00:00",
+  "sha256": "e7c50a329bf67c109e0edf1d2d549b2f3b804128ac76a9cd5326ad3991446e53",
+  "bytes": 11868100,
+  "stops": 653,
+  "trips": 3912,
+  "routes": 44,
+  "places": 321,
+  "walkingNodes": 50294,
+  "walkingEdges": 72600,
+  "sources": [
+    {
+      "agency": "wheels",
+      "trips": 3156,
+      "start": "20260921",
+      "end": "20270129"
+    },
+    {
+      "agency": "bart",
+      "trips": 756,
+      "start": "20260810",
+      "end": "20270110"
+    }
+  ],
+  "sourceUrls": {
+    "wheels": "https://data.ca.gov/dataset/cal-itp-gtfs-ingest-pipeline-dataset",
+    "bart": "https://www.bart.gov/schedules/developers/gtfs",
+    "walking": "https://www.openstreetmap.org/copyright"
+  },
+  "validRange": {
+    "start": "20260921",
+    "end": "20270110"
+  }
+}
