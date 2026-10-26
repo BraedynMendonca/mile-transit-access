@@ -1,5 +1,7 @@
 # Mile — Tri-Valley Transit Access Lab
 
+**Live website:** https://mile-transit-access.vercel.app — public Vercel production site, with no sign-in required.
+
 A complete, responsive web app for exploring what public transit makes reachable around Dublin, Pleasanton, and Livermore, California. Built for a Congressional App Challenge project using real public datasets.
 
 Choose a starting point, date, departure time, travel budget, walking tolerance, and transfer limit. Mile calculates reachable places on a connected walking network and real Wheels/BART timetables. Compare morning and evening access, inspect an itinerary, view Census vehicle-availability context, export CSV results, and share a reproducible analysis link.

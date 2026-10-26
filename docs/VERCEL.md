@@ -1,5 +1,9 @@
 # Vercel hosting and mobile website
 
+**Production URL:** https://mile-transit-access.vercel.app
+
+Deployment `dpl_2LRA6Tv6XjqHYHR1N9Z9pJJytRUA` reached `READY` in Production. An unauthenticated request to the site and its compressed dataset returned HTTP 200. The downloaded dataset's SHA-256 matches the validated source. The hosted app was checked at 390 × 844 with no horizontal overflow and no browser errors; its default result is 116 reachable places and 341 stops. Application source commit: `1e0934022d30347c3eacb1c17ac39fb61aa6ec55`.
+
 ## Target
 
 - Vercel team: `pingmeherealways-2881s-projects`
